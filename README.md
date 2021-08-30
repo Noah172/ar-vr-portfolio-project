@@ -30,3 +30,7 @@ Desktop - Windows
 * Fine tune of the movement/shooting mechanics for Player character.
 * Program basic IA for ground enemies.
 * Program basic IA for bosses.
+
+## Assets Credits
+* [Pixel Fantasy Caves](https://assetstore.unity.com/packages/2d/environments/pixel-fantasy-caves-152375). Szadi Art.
+* [RPG Worlds Caves](https://assetstore.unity.com/packages/2d/environments/rpg-worlds-caves-167274). Szadi Art.
