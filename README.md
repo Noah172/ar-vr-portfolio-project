@@ -9,9 +9,9 @@ This is a Unity 2D project, thought to be a platformer/shooter the main mechanic
 
 
 ## KEY FEATURES
-* <i>Watch your step (Platforming)</i> — Classic platforming, with lots of platforms and lots of jumping.
-* <i>Tasty munitions (Shooting)</i> — Shoot [chontaduro](https://www.google.com/search?q=chontaduro&client=firefox-b-d&sxsrf=ALeKk01N8zkB0LQcCEL0iQWbn29L6q-mlA:1629762138268&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjwlceKqcjyAhUAQjABHbf5ArAQ_AUoAXoECAEQAw&biw=1366&bih=643) projectiles (they taste great with salt and honey) and military grade [dumpling](https://www.google.com/search?q=dumpling&client=firefox-b-d&sxsrf=ALeKk03dI1qlUMwrC0XDyJZ8P5fZJ7JBCw:1629762541067&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjehNDKqsjyAhVPSzABHS3gDbUQ_AUoAXoECAEQAw&biw=1366&bih=643) grenades (each one made by hand) among others at the LEMeG’s legions.
-* <i>Was this always here? (Exploration)</i> — World exploration with hidden paths and treasures.
+* <i><b>Watch your step (Platforming)</b></i> — Classic platforming, with lots of platforms and lots of jumping.
+* <i><b>Tasty munitions (Shooting)</b></i> — Shoot [chontaduro](https://www.google.com/search?q=chontaduro&client=firefox-b-d&sxsrf=ALeKk01N8zkB0LQcCEL0iQWbn29L6q-mlA:1629762138268&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjwlceKqcjyAhUAQjABHbf5ArAQ_AUoAXoECAEQAw&biw=1366&bih=643) projectiles (they taste great with salt and honey) and military grade [dumpling](https://www.google.com/search?q=dumpling&client=firefox-b-d&sxsrf=ALeKk03dI1qlUMwrC0XDyJZ8P5fZJ7JBCw:1629762541067&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjehNDKqsjyAhVPSzABHS3gDbUQ_AUoAXoECAEQAw&biw=1366&bih=643) grenades (each one made by hand) among others at the LEMeG’s legions.
+* <i><b>Was this always here? (Exploration)</b></i> — World exploration with hidden paths and treasures.
 
 ## GENRE
 Platforming/Shooter 2D with exploration elements.
