@@ -11,8 +11,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Background
+  - Terrain
   - 
   - 
   - 
@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Backgronud
+    uniqueID: 3854526331
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Terrrain
+    uniqueID: 1057636541
+    locked: 0
+  - name: Player
+    uniqueID: 3553164993
+    locked: 0
+  - name: Frontground
+    uniqueID: 3315308511
     locked: 0
