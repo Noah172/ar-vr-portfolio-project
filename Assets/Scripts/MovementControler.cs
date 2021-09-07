@@ -23,7 +23,7 @@ public class MovementControler : MonoBehaviour
 
     private void jump(InputAction.CallbackContext obj)
     {
-        throw new NotImplementedException();
+        Debug.Log("Salto, saltito, saltote");
     }
 
     private void OnDisable()
@@ -34,6 +34,6 @@ public class MovementControler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        // Debug.Log("moviendote " + movement.ReadValue<Vector2>());
     }
 }
