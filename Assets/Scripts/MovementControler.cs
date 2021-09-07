@@ -6,10 +6,14 @@ public class MovementControler : MonoBehaviour
 {
     private GaticoMoves gaticoMov;
     private InputAction movement;
+    private Rigidbody2D plyr;
+
+    public float Force = 5f;
 
     private void Awake()
     {
         gaticoMov = new GaticoMoves();
+        plyr = GetComponent<Rigidbody2D>();
     }
 
     private void OnEnable()
@@ -23,7 +27,7 @@ public class MovementControler : MonoBehaviour
 
     private void jump(InputAction.CallbackContext obj)
     {
-        Debug.Log("Salto, saltito, saltote");
+        plyr.velocity = new Vector2(plyr.velocity.x, Force);
     }
 
     private void OnDisable()
@@ -34,6 +38,7 @@ public class MovementControler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        // Debug.Log("moviendote " + movement.ReadValue<Vector2>());
+        if (movement.ReadValue<Vector2>().x != 0)
+            plyr.velocity = new Vector2(movement.ReadValue<Vector2>().x * (Force / 2), 0);
     }
 }
