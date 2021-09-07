@@ -1,21 +1,39 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MovementControler : MonoBehaviour
 {
-    private Rigidbody2D plyr;
+    private GaticoMoves gaticoMov;
+    private InputAction movement;
 
-    // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
-        plyr = GetComponent<Rigidbody2D>();
+        gaticoMov = new GaticoMoves();
     }
 
-    // FixedUpdate is called once per frame
+    private void OnEnable()
+    {
+        movement = gaticoMov.Maww.Movement;
+        movement.Enable();
+
+        gaticoMov.Maww.Jump.performed += jump;
+        gaticoMov.Maww.Enable();
+    }
+
+    private void jump(InputAction.CallbackContext obj)
+    {
+        throw new NotImplementedException();
+    }
+
+    private void OnDisable()
+    {
+        movement.Disable();
+        gaticoMov.Maww.Jump.Disable();
+    }
+
     private void FixedUpdate()
     {
-        // here is the controls for the horizontal movements
-        float dir = Input.GetAxisRaw("Horizontal");
-        if (dir != 0)
-            plyr.velocity = new Vector2(dir * 6f, 0);
+        
     }
 }
