@@ -20,6 +20,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "MainShoot",
+                    "type": "Button",
+                    "id": "9d659781-6e00-4488-9f43-c6ad5c5681c8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SecondaryShoot",
+                    "type": "Button",
+                    "id": "a0d42885-a820-47a2-a4f9-6ea4c06be42a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -37,7 +53,7 @@
                 {
                     "name": "left",
                     "id": "95e62236-be62-4151-848b-26dda2769455",
-                    "path": "<Keyboard>/a",
+                    "path": "<Keyboard>/leftArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -48,7 +64,7 @@
                 {
                     "name": "right",
                     "id": "ed41f28f-c3a3-43e7-8b5d-2bb9f7ed88a7",
-                    "path": "<Keyboard>/d",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,7 +75,18 @@
                 {
                     "name": "",
                     "id": "866fa4e5-2e2f-4c06-8550-51239ea88e25",
-                    "path": "<Gamepad>/leftStick",
+                    "path": "<Gamepad>/dpad/left",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "16744e62-4756-4180-ac0a-5e2064438c43",
+                    "path": "<Gamepad>/dpad/right",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -97,6 +124,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bf191e0e-ace6-4fe2-9e4d-312fb53ebaf4",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d2f2fd2a-e991-4444-8968-76f44bb14388",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MainShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4be1a4be-c3a8-4f2b-a9b8-6ce75fc48114",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryShoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1bbf5f39-ea15-42ba-b81b-27e95207c1df",
+                    "path": "<Gamepad>/rightTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SecondaryShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

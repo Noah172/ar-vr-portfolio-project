@@ -50,6 +50,9 @@ TagManager:
   - name: Terrrain
     uniqueID: 1057636541
     locked: 0
+  - name: Hider
+    uniqueID: 4257961901
+    locked: 0
   - name: Player
     uniqueID: 3553164993
     locked: 0

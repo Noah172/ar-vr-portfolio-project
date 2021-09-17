@@ -33,6 +33,22 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""MainShoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""9d659781-6e00-4488-9f43-c6ad5c5681c8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SecondaryShoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""a0d42885-a820-47a2-a4f9-6ea4c06be42a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -50,7 +66,7 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                 {
                     ""name"": ""left"",
                     ""id"": ""95e62236-be62-4151-848b-26dda2769455"",
-                    ""path"": ""<Keyboard>/a"",
+                    ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -61,7 +77,7 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                 {
                     ""name"": ""right"",
                     ""id"": ""ed41f28f-c3a3-43e7-8b5d-2bb9f7ed88a7"",
-                    ""path"": ""<Keyboard>/d"",
+                    ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -72,7 +88,18 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""866fa4e5-2e2f-4c06-8550-51239ea88e25"",
-                    ""path"": ""<Gamepad>/leftStick"",
+                    ""path"": ""<Gamepad>/dpad/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Movement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""16744e62-4756-4180-ac0a-5e2064438c43"",
+                    ""path"": ""<Gamepad>/dpad/right"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -112,6 +139,50 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                     ""action"": ""Jump"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""bf191e0e-ace6-4fe2-9e4d-312fb53ebaf4"",
+                    ""path"": ""<Keyboard>/z"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d2f2fd2a-e991-4444-8968-76f44bb14388"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MainShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4be1a4be-c3a8-4f2b-a9b8-6ce75fc48114"",
+                    ""path"": ""<Keyboard>/x"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SecondaryShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1bbf5f39-ea15-42ba-b81b-27e95207c1df"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SecondaryShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -122,6 +193,8 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
         m_Maww = asset.FindActionMap("Maww", throwIfNotFound: true);
         m_Maww_Jump = m_Maww.FindAction("Jump", throwIfNotFound: true);
         m_Maww_Movement = m_Maww.FindAction("Movement", throwIfNotFound: true);
+        m_Maww_MainShoot = m_Maww.FindAction("MainShoot", throwIfNotFound: true);
+        m_Maww_SecondaryShoot = m_Maww.FindAction("SecondaryShoot", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -173,12 +246,16 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
     private IMawwActions m_MawwActionsCallbackInterface;
     private readonly InputAction m_Maww_Jump;
     private readonly InputAction m_Maww_Movement;
+    private readonly InputAction m_Maww_MainShoot;
+    private readonly InputAction m_Maww_SecondaryShoot;
     public struct MawwActions
     {
         private @GaticoMoves m_Wrapper;
         public MawwActions(@GaticoMoves wrapper) { m_Wrapper = wrapper; }
         public InputAction @Jump => m_Wrapper.m_Maww_Jump;
         public InputAction @Movement => m_Wrapper.m_Maww_Movement;
+        public InputAction @MainShoot => m_Wrapper.m_Maww_MainShoot;
+        public InputAction @SecondaryShoot => m_Wrapper.m_Maww_SecondaryShoot;
         public InputActionMap Get() { return m_Wrapper.m_Maww; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -194,6 +271,12 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                 @Movement.started -= m_Wrapper.m_MawwActionsCallbackInterface.OnMovement;
                 @Movement.performed -= m_Wrapper.m_MawwActionsCallbackInterface.OnMovement;
                 @Movement.canceled -= m_Wrapper.m_MawwActionsCallbackInterface.OnMovement;
+                @MainShoot.started -= m_Wrapper.m_MawwActionsCallbackInterface.OnMainShoot;
+                @MainShoot.performed -= m_Wrapper.m_MawwActionsCallbackInterface.OnMainShoot;
+                @MainShoot.canceled -= m_Wrapper.m_MawwActionsCallbackInterface.OnMainShoot;
+                @SecondaryShoot.started -= m_Wrapper.m_MawwActionsCallbackInterface.OnSecondaryShoot;
+                @SecondaryShoot.performed -= m_Wrapper.m_MawwActionsCallbackInterface.OnSecondaryShoot;
+                @SecondaryShoot.canceled -= m_Wrapper.m_MawwActionsCallbackInterface.OnSecondaryShoot;
             }
             m_Wrapper.m_MawwActionsCallbackInterface = instance;
             if (instance != null)
@@ -204,6 +287,12 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
                 @Movement.started += instance.OnMovement;
                 @Movement.performed += instance.OnMovement;
                 @Movement.canceled += instance.OnMovement;
+                @MainShoot.started += instance.OnMainShoot;
+                @MainShoot.performed += instance.OnMainShoot;
+                @MainShoot.canceled += instance.OnMainShoot;
+                @SecondaryShoot.started += instance.OnSecondaryShoot;
+                @SecondaryShoot.performed += instance.OnSecondaryShoot;
+                @SecondaryShoot.canceled += instance.OnSecondaryShoot;
             }
         }
     }
@@ -212,5 +301,7 @@ public class @GaticoMoves : IInputActionCollection, IDisposable
     {
         void OnJump(InputAction.CallbackContext context);
         void OnMovement(InputAction.CallbackContext context);
+        void OnMainShoot(InputAction.CallbackContext context);
+        void OnSecondaryShoot(InputAction.CallbackContext context);
     }
 }
