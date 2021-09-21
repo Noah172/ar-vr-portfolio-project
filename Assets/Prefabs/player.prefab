@@ -95,7 +95,7 @@ SortingGroup:
   m_GameObject: {fileID: 7547247468888471082}
   m_Enabled: 1
   m_SortingLayerID: -741802303
-  m_SortingLayer: 2
+  m_SortingLayer: 3
   m_SortingOrder: 0
 --- !u!50 &7547247468888471084
 Rigidbody2D:
@@ -157,3 +157,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Force: 5
+  Health: 100
