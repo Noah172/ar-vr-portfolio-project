@@ -51,7 +51,7 @@ public class PlayerDetector : MonoBehaviour
 
     public void PerformDetection()
     {
-        Collider2D collider = Physics2D.OverlapBox((Vector2)detectorOrigin.position + detectorOriginOffset, detectorSize, 0, detectorLayerMask);
+        Collider2D collider = Physics2D.OverlapBox((Vector2)detectorOrigin.position + detectorOriginOffset, detectorSize, 3, detectorLayerMask);
 
         if (collider != null)
         {
