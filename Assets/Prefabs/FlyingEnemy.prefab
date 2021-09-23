@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3299270656239801999}
   - component: {fileID: 3299270656239801996}
   - component: {fileID: 3299270656239801997}
-  - component: {fileID: 3299270656239801994}
+  - component: {fileID: 394095387}
   m_Layer: 0
   m_Name: FlyingEnemy
   m_TagString: Enemy
@@ -95,19 +95,27 @@ SortingGroup:
   m_SortingLayerID: -741802303
   m_SortingLayer: 3
   m_SortingOrder: 0
---- !u!70 &3299270656239801994
-CapsuleCollider2D:
+--- !u!114 &394095387
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3299270656239801995}
   m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 2}
-  m_Direction: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 131db14faf6045a46877986230d1de14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <PlayerDetected>k__BackingField: 0
+  detectorOrigin: {fileID: 3299270656239801999}
+  detectorSize: {x: 4, y: 4}
+  detectorArea: 3
+  detectorOriginOffset: {x: 0, y: 0}
+  detectOnDelay: 0.3
+  detectorLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  gizmoColor: {r: 0, g: 0, b: 1, a: 1}
+  gizmoDetectedColor: {r: 1, g: 0, b: 0, a: 1}
+  showGizmos: 1
